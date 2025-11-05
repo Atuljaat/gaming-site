@@ -1,0 +1,1215 @@
+[00:00:01.484] Server  LOG      ✓ Ready in 1268ms
+[00:00:03.402] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:04.104] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:06.844] Server  LOG     user is loggend in , allowing access to  "/games"
+[00:00:09.506] Server  LOG     user is loggend in , allowing access to  "/games"
+[00:00:11.603] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:11.727] Browser ERROR   ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:11.727] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:11.727] Browser ERROR   ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:11.727] Browser ERROR   ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.213] Browser ERROR   ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.214] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.214] Browser ERROR   ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.214] Browser ERROR   ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.214] Browser ERROR   ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.214] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.214] Browser ERROR   ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.214] Browser ERROR   ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.353] Browser ERROR   ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.353] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.353] Browser ERROR   ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.353] Browser ERROR   ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.368] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+
+./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:12.473] Browser ERROR   uncaughtError: Error: ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:12.637] Browser ERROR   ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.637] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.637] Browser ERROR   ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.637] Browser ERROR   ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.637] Browser ERROR   ./app/components/LogininForm.tsx:4:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  2 | import React from 'react'
+  3 | import { useRef , useState } from 'react'
+> 4 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  5 | import type { FormEvent } from 'react';
+  6 | import { authClient } from '../lib/client';
+  7 | import { useRouter } from 'next/navigation';
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.637] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.637] Browser ERROR   ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:12.637] Browser ERROR   ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:29.619] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.620] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.621] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.622] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.622] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.623] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.623] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.624] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.625] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.625] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.626] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.627] Server  ERROR    ⨯ ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:29.752] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:29.752] Browser ERROR   ./app/components/LogininForm.tsx:8:1
+Module not found: Can't resolve '@/frontend/components/ui/checkbox'
+   6 | import { authClient } from '../lib/client';
+   7 | import { useRouter } from 'next/navigation';
+>  8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+   9 | import { Label } from '@/frontend/components/ui/label';
+  10 | import Social from './Social';
+  11 |
+
+Import map: aliased to relative './frontend/components/ui/checkbox' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:29.752] Browser ERROR   ./app/components/LogininForm.tsx:9:1
+Module not found: Can't resolve '@/frontend/components/ui/label'
+   7 | import { useRouter } from 'next/navigation';
+   8 | import { Checkbox } from '@/frontend/components/ui/checkbox';
+>  9 | import { Label } from '@/frontend/components/ui/label';
+     | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  10 | import Social from './Social';
+  11 |
+  12 | function LogininForm () {
+
+Import map: aliased to relative './frontend/components/ui/label' inside of [project]/
+
+Import trace:
+  Server Component:
+    ./app/components/LogininForm.tsx
+    ./app/login/page.tsx
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:32.663] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:32.664] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:32.664] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:32.665] Server  ERROR    ⨯ ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+
+
+[00:00:32.795] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:36.936] Browser ERROR   ./app/components/Social.tsx:3:1
+Module not found: Can't resolve '@/frontend/components/ui/button'
+  1 | 'use client'
+  2 | import React from 'react'
+> 3 | import { Button } from '@/frontend/components/ui/button';
+    | ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  4 | import { authClient } from '../lib/client';
+  5 | import { discord } from 'better-auth/social-providers';
+  6 |
+
+Import map: aliased to relative './frontend/components/ui/button' inside of [project]/
+
+Import traces:
+  Client Component Browser:
+    ./app/components/Social.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Client Component Browser]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+  Client Component SSR:
+    ./app/components/Social.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Client Component SSR]
+    ./app/components/LogininForm.tsx [Server Component]
+    ./app/login/page.tsx [Server Component]
+
+https://nextjs.org/docs/messages/module-not-found
+[00:00:41.362] Server  LOG      ✓ Compiled in 11ms
+[00:00:41.614] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:42.828] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:47.842] Browser INFO    %cDownload the React DevTools for a better development experience: https://react.dev/link/react-devtools font-weight:bold
+[00:00:49.203] Server  LOG     user is loggend in , allowing access to  "/games"

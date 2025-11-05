@@ -1,0 +1,26 @@
+services:
+  database :
+    image : postgres:16
+    restart : always
+    environment :
+      POSTGRES_USER : user
+      POSTGRES_PASSWORD : password
+      POSTGRES_DB : gaming_site_db
+    ports :
+      - "5432:5432"
+    volumes :
+      - gaming_site_db:/var/lib/postgresql/data
+  
+  pgAdmin :
+    image : dpage/pgadmin4
+    restart : always
+    environment :
+      PGADMIN_DEFAULT_EMAIL : admin@example.com
+      PGADMIN_DEFAULT_PASSWORD : admin
+    ports :
+      - "81:80"
+    depends_on :
+      - database
+
+volumes:
+  gaming_site_db:

@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 18, "column": 0}, "map": {"version":3,"sources":["file:///home/atul/Desktop/gaming-site/frontend/app/games/page.tsx"],"sourcesContent":["import React from 'react'\nimport { auth } from '../lib/auth'\nimport { headers } from 'next/headers'\nimport { redirect } from 'next/navigation'\n\nasync function page() {\n  // const session = await auth.api.getSession({\n  //   headers: await headers()\n  // })\n\n  // if (!session?.session) {\n  //   redirect('/login')\n  // }\n\n  return (\n    <div className='flex items-center justify-center min-h-screen text-3xl ' >\n        THIS IS A GAME PAGE AND YOU NEED TO BE LOGIN TO SEE THIS\n    </div>\n  )\n}\n\nexport default page"],"names":[],"mappings":";;;;;;AAKA,eAAe;IACb,8CAA8C;IAC9C,6BAA6B;IAC7B,KAAK;IAEL,2BAA2B;IAC3B,uBAAuB;IACvB,IAAI;IAEJ,qBACE,8OAAC;QAAI,WAAU;kBAA2D;;;;;;AAI9E;uCAEe","debugId":null}}]
+}

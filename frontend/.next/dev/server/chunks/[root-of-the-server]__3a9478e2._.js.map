@@ -1,0 +1,6 @@
+{
+  "version": 3,
+  "sources": [],
+  "sections": [
+    {"offset": {"line": 46, "column": 0}, "map": {"version":3,"sources":["file:///home/atul/Desktop/gaming-site/frontend/proxy.ts"],"sourcesContent":["import { NextRequest, NextResponse } from \"next/server\";\nimport { headers } from \"next/headers\";\nimport {auth} from \"@/app/\"\n\nexport async function proxy(request: NextRequest) {\n    const session = await auth.api.getSession({\n        headers: request.headers\n    })\n\n    const pathname = request.nextUrl.pathname;\n\n    if(!session) {\n        console.log('user is not logged in , not allowing access to ' , pathname );\n        return NextResponse.redirect(new URL(\"/login\", request.url));\n    }\n\n    console.log('user is loggend in , allowing access to ' , pathname );\n    return NextResponse.next();\n}\n\nexport const config = {\n  matcher: [\"/games/:path*\"]\n};  "],"names":[],"mappings":";;;;;;AAAA;;;;;;;;AAIO,eAAe,MAAM,OAAoB;IAC5C,MAAM,UAAU,MAAM,KAAK,GAAG,CAAC,UAAU,CAAC;QACtC,SAAS,QAAQ,OAAO;IAC5B;IAEA,MAAM,WAAW,QAAQ,OAAO,CAAC,QAAQ;IAEzC,IAAG,CAAC,SAAS;QACT,QAAQ,GAAG,CAAC,mDAAoD;QAChE,OAAO,8IAAY,CAAC,QAAQ,CAAC,IAAI,IAAI,UAAU,QAAQ,GAAG;IAC9D;IAEA,QAAQ,GAAG,CAAC,4CAA6C;IACzD,OAAO,8IAAY,CAAC,IAAI;AAC5B;AAEO,MAAM,SAAS;IACpB,SAAS;QAAC;KAAgB;AAC5B","debugId":null}}]
+}
