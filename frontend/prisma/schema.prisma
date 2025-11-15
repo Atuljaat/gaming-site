@@ -1,4 +1,3 @@
-
 generator client {
   provider = "prisma-client-js"
 }
@@ -19,6 +18,9 @@ model User {
   updatedAt     DateTime  @default(now()) @updatedAt
   sessions      Session[]
   accounts      Account[]
+  wallet        Wallet?
+  Seed          Seed[]
+  Bet           Bet[]
 
   @@unique([email])
   @@map("user")
@@ -76,4 +78,56 @@ model Jwks {
   createdAt  DateTime
 
   @@map("jwks")
+}
+
+model Wallet {
+  id        String   @id @default(uuid())
+  userId    String   @unique
+  user      User     @relation(fields: [userId], references: [id])
+  balance   Float    @default(0)
+  createdAt DateTime @default(now())
+
+  @@map("wallet")
+}
+
+model Game {
+  id        String   @id @default(uuid())
+  name      String
+  createdAt DateTime @default(now())
+  Bet       Bet[]
+
+  @@map("game")
+}
+
+model Seed {
+  id               String   @id @default(uuid())
+  clientSeed       String
+  serverSeed       String
+  hashedServerSeed String
+  userId           String
+  user             User     @relation(fields: [userId], references: [id])
+  nonce            Int      @default(0)
+  createdAt        DateTime @default(now())
+  isUsed           Boolean  @default(false)
+  Bet              Bet[]
+
+  @@map("seed")
+}
+
+model Bet {
+  id            String   @id @default(uuid())
+  amount        Float
+  outcome       String
+  userId        String
+  gameId        String  @default(uuid())
+  createdAt     DateTime @default(now())
+  gameData      Json? // e.g., minesLocation , multiplier, etc.
+  gameName      String
+  seedId        String
+
+  seed Seed @relation(fields: [seedId], references: [id])
+  user User @relation(fields: [userId], references: [id])
+  game Game @relation(fields: [gameId], references: [id])
+
+  @@map("bet")
 }

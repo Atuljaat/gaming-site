@@ -1,0 +1,3 @@
+padmin :
+INSERT INTO game VALUES(1,"mines');
+

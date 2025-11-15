@@ -1,16 +1,16 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import Link from 'next/link'
 import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from 'react';
 import { authClient } from '../lib/client';
+import Balance from './Balance';
 
 // TODO : Make the navbar responsive
 function Navbar() {
     
     const session = authClient.useSession();
-    // const session = await authClient.token();
-    // console.log('Session in Navbar : ', session);
+    const [ balance , setBalance ] = useState<number | null>(null)
 
     const navItems = [
         {
@@ -61,14 +61,22 @@ function Navbar() {
                 }
             </div>
             <div className='lg:flex hidden gap-4 ' >
-                { session?.data ? <button onClick={handleSignOut}>Sign Out</button> : (
+                { session?.data ? 
+                (
+                <>
+                <Balance />
+                <button onClick={handleSignOut}>Sign Out</button>
+                </>
+                )
+                :
+                (
                     authItems.map((item) => (
                         <button key={item.name}>
                             <Link href={`./${item.link}`} >
                                 {item.name}
                             </Link>
                         </button>
-                    )))
+                )))
                 }
             </div>
             {/* <div className='lg:hidden block'>
