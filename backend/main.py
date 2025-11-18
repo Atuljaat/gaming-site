@@ -115,43 +115,50 @@ async def start_mines_game(req: Request):
 @app.post("/games/mines/reveal")
 async def reveal_mines_cell(req: Request):
     data = await req.json()
-    cell_index = int(data.get("cellIndex"))
-    bet_id = data.get("betId")
-    user_id = data.get("userId")
+    index = data.get("cellIndex")
+    mines = [2,3,4]
+    if index in mines :
+        return False
+    else :
+        return True
+    # cell_index = int(data.get("cellIndex"))
+    # bet_id = data.get("betId")
+    # user_id = data.get("userId")
 
     # CHECK KRUNGA FOR REVEAL LOGIC
-    conn = await init_db()
-    # Fetch bet and seed details
-    query = "SELECT * FROM bet where id = $1 AND \"userId\" = $2"
-    record = await conn.fetchrow(query, bet_id, user_id)
-    # print(record['gameData']['mines'])
-    mineLocation = list(record['gameData']['mines'])
-    if cell_index in mineLocation:
-        # USKE PAISE KHAJUNGA 
-        # uska bet ka outcome lost kar dunga
-        query = "UPDATE bet SET outcome = $1 WHERE id = $2"
-        await conn.execute(query, "lost", bet_id)
-        lost_info = {
-            "mines" : mineLocation,
-            "multiplier" : 0,
-        }
-    else:
-        # USKA bet mai muliplier badha dunga aur tiles remaining kam kar dunga
-        # aur fir uska updated game data wapas kar dunga
-        updated_multiplier = record['gameData']['multiplier'] + 0.2  
-        updated_tiles_remaining = record['gameData']['tilesRemaining'] - 1
-        updated_game_data = {
-            "mines": mineLocation,
-            "multiplier": updated_multiplier,
-            "tilesRemaining": updated_tiles_remaining
-        }
-        query = "UPDATE bet SET \"gameData\" = $1 WHERE id = $2"
-        await conn.execute(query, json.dumps(updated_game_data), bet_id)
-        return {
-            "mines": mineLocation,
-            "multiplier": updated_multiplier,
-            "tilesRemaining": updated_tiles_remaining
-        }
+    # conn = await init_db()
+    
+    # # Fetch bet and seed details
+    # query = "SELECT * FROM bet where id = $1 AND \"userId\" = $2"
+    # record = await conn.fetchrow(query, bet_id, user_id)
+    # # print(record['gameData']['mines'])
+    # mineLocation = list(record['gameData']['mines'])
+    # if cell_index in mineLocation:
+    #     # USKE PAISE KHAJUNGA 
+    #     # uska bet ka outcome lost kar dunga
+    #     query = "UPDATE bet SET outcome = $1 WHERE id = $2"
+    #     await conn.execute(query, "lost", bet_id)
+    #     lost_info = {
+    #         "mines" : mineLocation,
+    #         "multiplier" : 0,
+    #     }
+    # else:
+    #     # USKA bet mai muliplier badha dunga aur tiles remaining kam kar dunga
+    #     # aur fir uska updated game data wapas kar dunga
+    #     updated_multiplier = record['gameData']['multiplier'] + 0.2  
+    #     updated_tiles_remaining = record['gameData']['tilesRemaining'] - 1
+    #     updated_game_data = {
+    #         "mines": mineLocation,
+    #         "multiplier": updated_multiplier,
+    #         "tilesRemaining": updated_tiles_remaining
+    #     }
+    #     query = "UPDATE bet SET \"gameData\" = $1 WHERE id = $2"
+    #     await conn.execute(query, json.dumps(updated_game_data), bet_id)
+    #     return {
+    #         "mines": mineLocation,
+    #         "multiplier": updated_multiplier,
+    #         "tilesRemaining": updated_tiles_remaining
+    #     }
     
 
 @app.post("/games/mines/cashout")

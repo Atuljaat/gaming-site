@@ -1,10 +1,12 @@
 import React from 'react'
-import MineGame from '@/app/components/MineGame'
+import BetControls from '@/app/components/game/BetControls'
+import MinesUI from '@/app/components/game/MinesUI'
 
 function page() {
   return (
-    <div className='flex items-center justify-center min-h-screen text-3xl '>
-        <MineGame />
+    <div className='min-h-screen flex justify-evenly items-center'>
+      <BetControls />
+      <MinesUI />
     </div>
   )
 }
