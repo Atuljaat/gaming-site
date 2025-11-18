@@ -5,12 +5,15 @@ import { GiHamburgerMenu } from "react-icons/gi";
 import { useState } from 'react';
 import { authClient } from '../lib/client';
 import Balance from './Balance';
+import { useUserStore } from '../store/userStore';
 
 // TODO : Make the navbar responsive
 function Navbar() {
     
     const session = authClient.useSession();
     const [ balance , setBalance ] = useState<number | null>(null)
+    const {walletBalance} = useUserStore()
+
 
     const navItems = [
         {
@@ -64,7 +67,8 @@ function Navbar() {
                 { session?.data ? 
                 (
                 <>
-                <Balance />
+                {/* <Balance /> */}
+                <span>Balance: {walletBalance}</span>
                 <button onClick={handleSignOut}>Sign Out</button>
                 </>
                 )
