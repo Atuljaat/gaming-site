@@ -2,8 +2,8 @@ import random
 import hashlib
 import hmac
 
-
 class mines :
+
     def __init__(self, bet: float ,mines: int , client_secret: str ) -> None:
         self.bet = bet
         self.mines = mines
@@ -19,7 +19,7 @@ class mines :
     def generate_secret(self):
         secret = random.randint(1,1000)
         return secret
-    
+
     def generate_hash(self):
         client_secret_bytes = self.client_secret.encode()
         server_secret_bytes = str(self.server_secret).encode()
@@ -38,18 +38,15 @@ class mines :
             mines.add(chunk)
             byte_offset += 4
         return mines
-    
+
     def return_important_values(self):
         return {
             "bet" : self.bet,
             "mines" : self.mines,
+            "mines_positions" : self.mines_positions,
             "server_seed" : str(self.server_secret),
             "client_seed" : str(self.client_secret),
             "hash_server_seed" : str(self.hashed_server_secret),
             "nonce" : self.nonce,
             "isUsed" : self.isUsed
         }
-        
-    
-
-
