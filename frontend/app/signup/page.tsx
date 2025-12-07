@@ -1,12 +1,8 @@
 import React from 'react'
 import SignupForm from '../components/SignupForm'
 
-function page() {
+export default function SignupPage() {
   return (
-    <div className='bg-blue-200' >
-        <SignupForm />
-    </div>
+    <SignupForm />
   )
 }
-
-export default page

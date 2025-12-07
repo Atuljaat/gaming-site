@@ -1,12 +1,9 @@
-import React from 'react'
-import LogininForm from '../components/LogininForm'
 
-async function page() {
+import React from 'react'
+import LoginForm from '../components/LoginForm'
+
+export default function LoginPage() {
   return (
-    <div className='bg-green-300 ' > 
-        <LogininForm />
-    </div>
+    <LoginForm />
   )
 }
-
-export default page

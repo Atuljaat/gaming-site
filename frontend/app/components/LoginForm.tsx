@@ -7,6 +7,7 @@ import { Loader2 } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
+import { Checkbox } from '@/components/ui/checkbox';
 import {
     Card,
     CardContent,
@@ -19,10 +20,10 @@ import { authClient } from '../lib/client';
 import Social from './Social';
 import AuthLayout from './auth/AuthLayout';
 
-function SignupForm() {
-    const usernameRef = useRef<HTMLInputElement>(null);
-    const emailRef = useRef<HTMLInputElement>(null);
+function LoginForm() {
     const passwordRef = useRef<HTMLInputElement>(null);
+    const emailRef = useRef<HTMLInputElement>(null);
+    const [rememberMe, setRememberMe] = useState<boolean>(false);
     const [isLoading, setIsLoading] = useState<boolean>(false);
     const [error, setError] = useState<string | null>(null);
     const router = useRouter()
@@ -32,20 +33,19 @@ function SignupForm() {
         setIsLoading(true);
         setError(null);
 
-        const username = usernameRef.current?.value || '';
         const email = emailRef.current?.value || '';
         const password = passwordRef.current?.value || '';
 
         try {
-            const { data, error } = await authClient.signUp.email({
-                name: username,
+            const { data, error } = await authClient.signIn.email({
                 email: email,
                 password: password,
+                rememberMe: rememberMe,
                 callbackURL: '/'
             })
 
             if (error) {
-                setError(error.message || 'An error occurred during sign up.');
+                setError(error.message || 'Invalid email or password');
                 setIsLoading(false);
                 return;
             }
@@ -63,9 +63,9 @@ function SignupForm() {
         <AuthLayout>
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm">
                 <CardHeader className="space-y-1 text-center">
-                    <CardTitle className="text-2xl">Create an account</CardTitle>
+                    <CardTitle className="text-2xl">Sign in</CardTitle>
                     <CardDescription>
-                        Enter your email below to create your account
+                        Enter your email below to login to your account
                     </CardDescription>
                 </CardHeader>
                 <CardContent className="grid gap-4">
@@ -90,17 +90,6 @@ function SignupForm() {
                         )}
 
                         <div className="grid gap-2">
-                            <Label htmlFor="username">Username</Label>
-                            <Input
-                                ref={usernameRef}
-                                id="username"
-                                type="text"
-                                placeholder="GamerTag"
-                                required
-                            />
-                        </div>
-
-                        <div className="grid gap-2">
                             <Label htmlFor="email">Email</Label>
                             <Input
                                 ref={emailRef}
@@ -110,9 +99,16 @@ function SignupForm() {
                                 required
                             />
                         </div>
-
                         <div className="grid gap-2">
-                            <Label htmlFor="password">Password</Label>
+                            <div className="flex items-center justify-between">
+                                <Label htmlFor="password">Password</Label>
+                                <Link
+                                    href="/forgot-password"
+                                    className="text-sm font-medium text-primary hover:underline"
+                                >
+                                    Forgot password?
+                                </Link>
+                            </div>
                             <Input
                                 ref={passwordRef}
                                 id="password"
@@ -121,20 +117,34 @@ function SignupForm() {
                             />
                         </div>
 
+                        <div className="flex items-center space-x-2">
+                            <Checkbox
+                                id="rememberMe"
+                                checked={rememberMe}
+                                onCheckedChange={(checked) => setRememberMe(checked as boolean)}
+                            />
+                            <Label
+                                htmlFor="rememberMe"
+                                className="text-sm font-medium leading-none peer-disabled:cursor-not-allowed peer-disabled:opacity-70"
+                            >
+                                Remember me
+                            </Label>
+                        </div>
+
                         <Button type="submit" className="w-full" disabled={isLoading}>
                             {isLoading ? (
                                 <Loader2 className="mr-2 h-4 w-4 animate-spin" />
                             ) : (
-                                "Create Account"
+                                "Sign In"
                             )}
                         </Button>
                     </form>
                 </CardContent>
                 <CardFooter>
                     <div className="text-center text-sm w-full text-muted-foreground">
-                        Already have an account?{" "}
-                        <Link href="/login" className="underline underline-offset-4 hover:text-primary">
-                            Sign in
+                        Don&apos;t have an account?{" "}
+                        <Link href="/signup" className="underline underline-offset-4 hover:text-primary">
+                            Sign up
                         </Link>
                     </div>
                 </CardFooter>
@@ -143,4 +153,4 @@ function SignupForm() {
     )
 }
 
-export default SignupForm
+export default LoginForm
